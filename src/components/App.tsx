@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {TypesProps} from "./types/types";
+import {TasksProps} from "./types/types";
 import {Input, Button, Checkbox, Radiogroup} from "./common"
 import {v4 as uuidv4} from 'uuid';
 // import {createRoot} from "react-dom/client";
@@ -17,7 +17,7 @@ const filters = [
 
 export const App = () => {
 
-    const todoList: TypesProps[] = [
+    const todoList: TasksProps[] = [
         {id: uuidv4(), label: "HTML", isDone: true},
         {id: uuidv4(), label: "CSS", isDone: true},
         {id: uuidv4(), label: "JS", isDone: false}

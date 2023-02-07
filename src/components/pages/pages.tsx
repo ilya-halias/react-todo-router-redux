@@ -1,5 +1,5 @@
 import {Link, Outlet, useParams} from "react-router-dom"
-import {TypesProps} from "../types/types";
+import {TasksProps} from "../types/types";
 
 export const Tasks = () => {
     return(
@@ -34,13 +34,13 @@ export const Profile = () => {
 export const Login = () =>
      (
          <h2>
-             <Link to="login"></Link>Нажмите:</h2>
+             <Link to="/login"></Link>Нажмите:</h2>
     )
 
 export const TodoById = () => {
     const { id } = useParams()
     const tasks = JSON.parse(localStorage.getItem("tasks") ?? "[]")
-    const task = tasks.find((task: TypesProps) => task.id === id)
+    const task = tasks.find((task: TasksProps) => task.id === id)
 
 
 return (
